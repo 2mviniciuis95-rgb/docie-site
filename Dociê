@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="scroll-behavior: smooth;">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DOCIÊ — Cada gosto, uma experiência ÚNICA</title>
+
+<style>
+/* TÍTULO COM BRILHO */
+header h1 {
+  font-size: 42px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow:
+      0 0 8px rgba(255, 255, 255, 0.8),
+      0 0 14px rgba(255, 0, 80, 0.8),
+      0 0 22px rgba(255, 0, 80, 0.6),
+      0 0 40px rgba(255, 0, 80, 0.4);
+  animation: brilhoNatal 2.5s ease-in-out infinite alternate;
+}
+
+/* Animação do brilho */
+@keyframes brilhoNatal {
+  0% {
+    text-shadow:
+      0 0 6px rgba(255,255,255,0.6),
+      0 0 10px rgba(255,0,80,0.4),
+      0 0 18px rgba(255,0,80,0.3);
+  }
+  100% {
+    text-shadow:
+      0 0 12px rgba(255,255,255,1),
+      0 0 22px rgba(255,0,80,1),
+      0 0 45px rgba(255,0,80,0.8);
+  }
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #fff5f6;
+    color: #3a2a2a;
+}
+
+/* TOPO */
+header {
+    text-align: center;
+    padding: 35px 20px 60px;
+    color: white;
+    background: linear-gradient(135deg, #a8002b, #c92d4b);
+    position: relative;
+}
+
+/* ONDAS */
+.wave {
+    position: relative;
+    margin-top: -70px;
+}
+
+.wave svg {
+    display: block;
+    width: 100%;
+}
+
+/* TÍTULOS */
+h1, h2 {
+    font-weight: 700;
+    color: #a8002b;
+    text-align: center;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+/* CARDÁPIO */
+.grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 0 15px #0001;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #0002;
+}
+
+/* SABORES */
+.sabor-card {
+    background: #ffffff;
+    border-left: 6px solid #a8002b;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 12px auto;
+    max-width: 700px;
+    box-shadow: 0 0 12px #0001;
+}
+
+/* SOBRE NÓS E LOCALIZAÇÃO CSS */
+.about-content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 0 15px #0001;
+    line-height: 1.6;
+    color: #3a2a2a;
+    text-align: left;
+}
+
+.about-content h3 {
+    color: #a8002b;
+    border-bottom: 2px solid #a8002b30;
+    padding-bottom: 5px;
+}
+
+/* NAVEGAÇÃO INTERNA */
+.navbar {
+    background: #a8002b;
+    padding: 10px 0;
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto 0; /* Ajuste para espaçamento */
+    border-radius: 8px;
+    position: relative; /* Para posicionar os flocos */
+    overflow: hidden; /* Garante que os flocos não saiam da barra */
+}
+
+/* Estilo para os flocos de neve */
+.snowflake {
+    color: white;
+    font-size: 14px; /* Tamanho do floco */
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    opacity: 0.7; /* Suave */
+    user-select: none; /* Não selecionável */
+    pointer-events: none; /* Não interfere com cliques */
+    z-index: 1; /* Acima do background, abaixo do texto */
+}
+/* Posicionamentos específicos dos flocos */
+.snowflake-1 { left: 5%; }
+.snowflake-2 { left: 20%; font-size: 10px; }
+.snowflake-3 { left: 35%; }
+.snowflake-4 { right: 35%; font-size: 12px; }
+.snowflake-5 { right: 20%; }
+.snowflake-6 { right: 5%; font-size: 10px; }
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    display: inline-block;
+    position: relative; /* Para que o texto fique acima dos flocos */
+    z-index: 2; /* Texto da navegação acima dos flocos */
+}
+
+.navbar a:hover {
+    background: #c92d4b;
+}
+
+footer {
+    background: #a8002b;
+    color: #ffe8e8;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* ★★★ MEDIA QUERY PARA CORREÇÃO MOBILE (Celular) ★★★ */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 36px;
+    }
+    .section {
+        padding: 40px 15px;
+    }
+    .navbar {
+        padding: 5px 0;
+        margin: 10px auto;
+        width: 95%; 
+    }
+    .navbar a {
+        margin: 5px 8px;
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .about-content {
+        padding: 15px;
+        text-align: center; /* Centraliza o conteúdo no celular */
+    }
+    /* Esconde flocos pequenos no mobile para não sobrecarregar */
+    .snowflake-2, .snowflake-6 {
+        display: none;
+    }
+}
+</style>
+</head>
+<body>
+
+<header id="inicio">
+    <h1>DOCIÊ 🎄</h1>
+    <p style="margin-top:-10px; font-size:18px; color:#ffeadd">
+        Cada camada, uma experiência ÚNICA
+    </p>
+
+    <nav class="navbar">
+        <span class="snowflake snowflake-1">❄</span>
+        <span class="snowflake snowflake-2">❅</span>
+        <span class="snowflake snowflake-3">❄</span>
+        
+        <a href="#inicio">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#detalhes">Sabores Detalhados</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#localizacao">Localização</a>
+
+        <span class="snowflake snowflake-4">❅</span>
+        <span class="snowflake snowflake-5">❄</span>
+        <span class="snowflake snowflake-6">❅</span>
+    </nav>
+</header>
+
+<div class="wave">
+    <svg viewBox="0 0 1440 120"><path fill="#fff5f6" d="M0,64L1440,0L1440,120L0,120Z"></path></svg>
+</div>
+
+<section class="section">
+    <h2>Bem-vindo ao Dociê 🎁</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        Os melhores doces artesanais com toque natalino! Role para baixo e descubra a felicidade em forma de doce.
+    </p>
+    <div style="text-align:center; margin-top:30px;">
+        
+    </div>
+</section>
+
+<div class="wave">
+    <svg viewBox="0 0 1440 120"><path fill="#ffffff" d="M0,64L1440,0L1440,120L0,120Z"></path></svg>
+</div>
+
+<section class="section" id="cardapio" style="background:white;">
+    <h2>Cardápio Oficial 🎄</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🥤 Copo da Felicidade</h3>
+            <p>Vários copos com sabores especiais, perfeitos para uma sobremesa individual.</p>
+            <strong>Sabores disponíveis:</strong>
+            <ul style="list-style:none; padding:0; margin-top:10px; color:#a8002b; font-weight:600;">
+                <li>🍇 Surpresa de Uva</li>
+                <li>🥤 Oreo Supreme</li>
+            </ul>
+            <a href="#detalhes" style="color:#c92d4b; font-size:14px; text-decoration:none;">Ver detalhes dos sabores &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3>🍫 Palha Italiana</h3>
+            <p>Doce clássico com toque especial natalino.</p>
+            <strong>Sabor disponível:</strong>
+            <p style="color:#a8002b; font-weight:600;">🥤 Oreo Supreme</p>
+            <a href="#detalhes" style="color:#c92d4b; font-size:14px; text-decoration:none;">Ver detalhes dos sabores &rarr;</a>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:30px;">
+        
+    </div>
+</section>
+
+<div class="wave">
+    <svg viewBox="0 0 1440 120"><path fill="#fff5f6" d="M0,64L1440,0L1440,120L0,120Z"></path></svg>
+</div>
+
+<section class="section" id="detalhes">
+    <h2>Detalhes de Cada Sabor 🍬</h2>
+    <p style="text-align:center; max-width:700px; margin:auto 0 30px;">
+        Conheça as camadas e os ingredientes que fazem nossos doces serem únicos.
+    </p>
+
+    <div class="sabor-card">
+        <h3>🍇 Surpresa de Uva</h3>
+        Brigadeiro branco, brigadeiro preto e a uva.
+    </div>
+
+    <div class="sabor-card">
+        <h3>🥤 Oreo Supreme</h3>
+        Brigadeiro branco, brigadeiro preto com brigadeiro de Oreo.
+    </div>
+
+    <div class="sabor-card">
+        <h3>🍫 Palha Italiana Oreo</h3>
+        A tradicional palha italiana de brigadeiro de leite ninho, oreo e leite em pó.
+    </div>
+</section>
+
+<div class="wave">
+    <svg viewBox="0 0 1440 120"><path fill="#ffffff" d="M0,64L1440,0L1440,120L0,120Z"></path></svg>
+</div>
+
+<section class="section" id="sobre" style="background:white;">
+    <h2>Quem Somos Nós 🌟</h2>
+
+    <div class="about-content">
+        <p>
+            A **Dociê** nasceu da paixão por transformar momentos simples em celebrações. Desde o início, nosso foco é oferecer doces artesanais de alta qualidade, feitos com ingredientes frescos e muito carinho.
+        </p>
+
+        <h3>Nossa Missão</h3>
+        <p>
+            Criar doces que não apenas satisfaçam o paladar, mas que também contem uma história. Queremos que cada mordida seja uma "experiência única", como diz o nosso lema.
+        </p>
+
+        <h3>O Toque Natalino</h3>
+        <p>
+            Acreditamos que o Natal é a época mais mágica do ano. Por isso, dedicamos nossos esforços para trazer um toque especial de festividade em cada Copo da Felicidade e Palha Italiana que preparamos.
+        </p>
+    </div>
+</section>
+
+<div class="wave">
+    <svg viewBox="0 0 1440 120"><path fill="#fff5f6" d="M0,64L1440,0L1440,120L0,120Z"></path></svg>
+</div>
+
+<section class="section" id="localizacao">
+    <h2>Onde Nos Encontrar 📍</h2>
+    <p style="text-align:center; max-width:700px; margin:auto; font-size:18px;">
+        Venha nos visitar e saborear a felicidade!
+    </p>
+
+    <div class="about-content" style="text-align:center; background:#ffffff;">
+        <h3 style="border-bottom:none;">Parque Linear Parahyba 4</h3>
+        <p style="font-size: 22px; font-weight: 700; color: #a8002b;">
+            DOMINGO | Das 16:00 às 19:30
+        </p>
+        <p>
+            Nosso ponto de venda fica no Parque Linear Parahyba 4, Venha para provar nossas gostosuras!
+        </p>
+        <div style="margin-top:20px;">
+            
+        </div>
+    </div>
+</section>
+
+<div class="wave">
+    <svg viewBox="0 0 1440 120"><path fill="#ffffff" d="M0,64L1440,0L1440,120L0,120Z"></path></svg>
+</div>
+
+<footer>
+    © 2025 Dociê • Feito com carinho 🎅✨
+</footer>
+
+</body>
+</html>
